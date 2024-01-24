@@ -15,3 +15,5 @@ The application fetches data from pokeapi.co.
 
 ## Utilized Libraries
 The app incorporates Bootstrap for styling and layout, and jQuery for simplified DOM manipulation and AJAX requests.
+
+[Check out the link](https://yougrom.github.io/pokedex-cf/)

@@ -1,37 +1,6 @@
 'use strict';
 
-// IIFE containing repository of pokemons and functions to access them
 const pokemonRepository = (function () {
-
-  //show a modal on top of list of pokemons that displays the details of the clicked pokemon
-
-  // code from video cf ====================================================================================================
-  function showModal(pokemon) { 
-    // Get the header and body of bootstrap modal
-    let modalBody = document.querySelector('.modal-body');
-    let modalTitle = document.querySelector('.modal-title');
-    let modalHeader = document.querySelector('.modal-header');
-  
-    modalTitle.empty();
-    modalBody.empty();
-
-    let nameElement = $('<h1>' + pokemon.name + '</h1>');
-    let imageElementFront = $('<img class="modal-img" style="width:50%">');
-    imageElementFront.attr('src', pokemon.imageUrlFront);
-    let imageElementBack = $('<img class="modal-img" style="width:50%">');
-    imageElementBack.attr('src', pokemon.imageUrlBack);
-    let heightElement = $('<p>' + 'Height : ' + pokemon.height + '</p>');
-    let weightElement = $('<p>' + 'Weight : ' + pokemon.weight + '</p>');
-    let typesElement = $('<p>' + 'Types : ' + pokemon.types + '</p>');
-
-    modalTitle.append(nameElement);
-    modalBody.append(imageElementFront);
-    modalBody.append(imageElementBack);
-    modalBody.append(heightElement);
-    modalBody.append(weightElement);
-    modalBody.append(typesElement);
-  }
-  // ====================================================================================================
 
   function showModal(title, text, imgurl, types) {
     console.log(imgurl);
@@ -117,15 +86,14 @@ const pokemonRepository = (function () {
   const pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
-  //function to return the array pokemonList
   function getAll() {
     return pokemonList;
   }
 
-  // function to add new pokemon to pokemonList
   function add(pokemon) {
     if (
-      typeof pokemon === 'object' && 'name' in pokemon) {
+      typeof pokemon === 'object' &&
+      'name' in pokemon) {
       pokemonList.push(pokemon);
     } else {
       console.log('Error: Invalid input. Please provide an object with "name", "height", and "types" properties.');
@@ -154,8 +122,7 @@ const pokemonRepository = (function () {
     addButtonEventListener(button, pokemon);
   }
 
-  //a subset of available pokemons defined by offset and limit is loaded from API
-  //loaded pokemons are then added to array pokemonList
+  // Code
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
