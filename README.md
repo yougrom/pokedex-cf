@@ -5,10 +5,8 @@ A compact web application built with HTML, CSS, and JavaScript, fetching data fr
 
 ## Core Functionalities
 * Integration with an external API for data retrieval.
-* Initial loading of a specific data set, with a functionality for users to request additional data through a 'Load More' button.
 * Presentation of a list showcasing Pokémon names.
 * Feature to load and display detailed information about a selected Pokémon in a pop-up modal.
-* Capability for users to perform searches on the website for specific Pokémon names.
 
 ## API Source for the Project
 The application fetches data from pokeapi.co.
