@@ -51,7 +51,7 @@ const pokemonRepository = (function () {
       showModal(pokemon);
     });
   }
-
+  
   //a subset of available pokemons defined by offset and limit is loaded from API
   //loaded pokemons are then added to array pokemonList
   function loadList() {
@@ -116,6 +116,7 @@ const pokemonRepository = (function () {
     modalBody.append(heightElement);
     modalBody.append(typesElement);
   }
+  
 
   return {
     add,

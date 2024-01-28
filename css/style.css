@@ -109,7 +109,6 @@ ul.mr-auto {
   border: 1px solid var(--base-color-1);
   background-color: var(--base-color-1);
   color: var(--text-color);
-  transition: var(--transition-duration);
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active, 
